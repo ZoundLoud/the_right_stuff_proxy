@@ -12,7 +12,7 @@ app.use(cors());
 
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/song/:id', express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {
   console.log(`server is running at http://localhost:${port}`)
